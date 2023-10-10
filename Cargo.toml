@@ -1,10 +1,12 @@
 [package]
 name = "choice_nocase"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Romain Giot <giot.romain@gmail.com>"]
 edition = "2021"
 license = "MIT"
 readme = "Readme.md"
+repository = "https://github.com/rgiot/choice_nocase"
+description = "Transforms a string as a list of strings separated by `|` where all combinations of character cases are generated. By construction first one is fully uppercase, second one is fully lowercase."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
