@@ -1,0 +1,5 @@
+error: expected string literal
+ --> tests/tests/wrong_type.rs:7:16
+  |
+7 |         case_choice!(2) => println!("good"),
+  |                      ^

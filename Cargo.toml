@@ -1,0 +1,19 @@
+[package]
+name = "choice_nocase"
+version = "0.1.0"
+authors = ["Romain Giot <giot.romain@gmail.com>"]
+edition = "2021"
+license = "MIT"
+readme = "Readme.md"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+proc-macro2 = "1.0.69"
+syn = "2.0.38"
+
+[dev-dependencies]
+trybuild = "1.0"
+
+[lib]
+proc-macro = true
