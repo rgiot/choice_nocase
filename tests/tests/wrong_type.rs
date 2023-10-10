@@ -1,4 +1,4 @@
-use choice_nocase::case_choice;
+use choice_nocase::choice_nocase;
 
 
 fn standard_case() {

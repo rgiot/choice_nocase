@@ -1,5 +1,13 @@
-error: expected string literal
- --> tests/tests/wrong_type.rs:7:16
+error: cannot find macro `case_choice` in this scope
+ --> tests/tests/wrong_type.rs:7:3
   |
 7 |         case_choice!(2) => println!("good"),
-  |                      ^
+  |         ^^^^^^^^^^^
+
+warning: unused import: `choice_nocase::choice_nocase`
+ --> tests/tests/wrong_type.rs:1:5
+  |
+1 | use choice_nocase::choice_nocase;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default

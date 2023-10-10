@@ -10,7 +10,7 @@ use syn::{parse_macro_input};
 ///
 /// `choice_nocase!("ab")` is replaced by `"AB" | "ab" | "aB" | "Ab" `
 #[proc_macro]
-pub fn case_choice(stream: TokenStream) -> TokenStream {
+pub fn choice_nocase(stream: TokenStream) -> TokenStream {
     let input = parse_macro_input!(stream as syn::LitStr);
 
     let s = input.value();

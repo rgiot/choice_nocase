@@ -1,9 +1,9 @@
-use choice_nocase::case_choice;
+use choice_nocase::choice_nocase;
 
 fn standard_case() {
 	let value = "hello".to_owned();
 	match value.as_ref() {
-		case_choice!("hello") => println!("good"),
+		choice_nocase!("hello") => println!("good"),
 		_ => println!("bad")
 	};
 }
