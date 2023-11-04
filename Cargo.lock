@@ -13,7 +13,7 @@ dependencies = [
 
 [[package]]
 name = "choice_nocase"
-version = "0.1.2"
+version = "0.2.0"
 dependencies = [
  "proc-macro2",
  "syn",
