@@ -1,8 +1,7 @@
-#![feature(extend_one)]
-
 use proc_macro::TokenStream;
 use proc_macro2::{Literal, TokenTree, Punct, Spacing};
 use syn::{parse_macro_input, parse::{Parse, ParseStream}, Error};
+use extend1::Extend1;
 
 
 enum Item {
@@ -78,7 +77,7 @@ pub fn choice_nocase(stream: TokenStream) -> TokenStream {
     // leave quickly if literal is empty
     if input.is_empty() {
         let mut output = proc_macro2::TokenStream::new();
-        output.extend_one(input.empty_literal());
+        output.extend1(input.empty_literal());
         return output.into();
     }
 
@@ -120,9 +119,9 @@ pub fn choice_nocase(stream: TokenStream) -> TokenStream {
         .map(|lit| proc_macro2::TokenTree::Literal(lit))
         .enumerate() {
             if i!=0 {
-                output.extend_one(TokenTree::Punct(Punct::new('|', Spacing::Alone)));
+                output.extend1(TokenTree::Punct(Punct::new('|', Spacing::Alone)));
             }
-            output.extend_one(token);
+            output.extend1(token);
     }
     output.into()
 }
